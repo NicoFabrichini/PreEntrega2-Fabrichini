@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    background-color: white;
+    overflow-x: hidden;
+}
+
+/*header*/
+header {
+    background-color: azure;
+}
+
+.saludo {
+    color: rgb(238, 10, 10);
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+}
+
+
+/* Main*/
+.preentrega {
+    text-align: center;
+}
+.imagen {
+    text-align: center;
+}
+main {
+    padding: 200px;
+    background-color: rgba(131, 64, 99, 0.281, 1);
+
+}
+
+/* Footer*/
+footer {
+    background-color: beige;
+    background-size: 25%;
+   
+    
+   
+
+}
+
+.nombre {
+       
+    font-style: oblique;
+    text-align: center;
+}
+
+
+
+
