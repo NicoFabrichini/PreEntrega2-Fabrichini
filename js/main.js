@@ -4,6 +4,7 @@ function nombreUsuario() {
   checked = 0;
   let nombre = prompt("Ingresa su nombre");
 
+
   while (checked === 0) {
     if (nombre === "") {
       alert("No ingresaste tu nombre");
@@ -43,4 +44,48 @@ function edadUsuario() {
   }
 }
 
+// Inicializamos un array para representar el carrito de compras
+const carrito = [];
+
+// Función para agregar un producto al carrito
+function agregarAlCarrito() {
+  const producto = prompt("Ingrese el nombre del producto:");
+  const precio = parseFloat(prompt("Ingrese el precio del producto:"));
+
+  if (!isNaN(precio) && precio > 0) {
+    carrito.push({ nombre: producto, precio: precio });
+    alert(`${producto} se ha agregado al carrito.`);
+  } else {
+    alert("El precio ingresado no es válido.");
+  }
+}
+// Función para calcular el total del carrito
+function calcularTotal() {
+  let total = 0;
+  for (const item of carrito) {
+    total += item.precio;
+  }
+  alert(`El total del carrito es: $${total.toFixed(2)}`);
+}
+
+// Función principal para gestionar el carrito de compras
+function main() {
+  while (true) {
+    const opcion = prompt(
+      "Seleccione una opción:\n1. Agregar producto al carrito\n2. Calcular total del carrito\n3. Salir"
+    );
+
+    if (opcion === "1") {
+      agregarAlCarrito();
+    } else if (opcion === "2") {
+      calcularTotal();
+    } else if (opcion === "3") {
+      break;
+    } else {
+      alert("Opción no válida. Por favor, seleccione una opción válida.");
+    }
+  }
+}
+
 edadUsuario();
+main();
